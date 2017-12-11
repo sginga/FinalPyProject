@@ -1,0 +1,38 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}
+Gray Web Designs | Request A Quote
+{% endblock %}
+
+{% block nav %}
+<li><a href="/">Home</a></li>
+<li class="active"><a href="/quote">Request A Quote <span class="sr-only">(current)</span></a></li>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="text-align:center;">
+  <h2>Request a quote: <small>many small projects will be between $400 and $1000</small></h2>
+</div>
+<form action="" method="post">
+  {% csrf_token %}
+
+  {% for field in form %}
+  <div class="row" style="padding-top:20px;">
+    <div class="col-sm-2 col-sm-push-3">
+      {{ field.label_tag }}
+      {{ field.errors }}
+    </div>
+    <div class="col-sm-4 col-sm-push-3">
+      {{ field }}
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="row" style="padding-top:20px;">
+    <div class="col-sm-4 col-sm-push-5">
+      <input type="submit" value="Send Request">
+    </div>
+  </div>
+</form>
+{% endblock %}

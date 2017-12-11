@@ -1,0 +1,56 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}
+Gray Web Designs | Home
+{% endblock %}
+
+{% block nav %}
+<li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+<li><a href="/quote">Request A Quote</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="container" style="">
+  <div class="jumbotron" style="text-align:center; background:#bdbdbd;">
+    <h1>A website is vital to any business<br></h1>
+    <h2 style="color:#1976d2; background:#e0e0e0; border-radius:15px; border:5px solid #1976d2; padding:10px;">No matter your field</h2>
+
+  </div>
+  <div class="row" style="margin-top:100px;">
+    <div class="col-md-4">
+      <img src="{% static "home/images/devices.png" %}" alt="" style="padding-bottom:20px;">
+    </div>
+    <div class="col-md-8">
+      <blockquote>
+        <h3>Tablet and smartphone compatabilty are a necessity</h3>
+        <p>10 years ago a website might have been fine without proper compatability for
+        smaller devices, however mobile and tablet internet usage has surpassed desktop
+        use worldwide. At Gray Web Designs, with a mobile-first design process, I can
+        ensure that your website remains attractive and responsive on all devices</p>
+      </blockquote>
+    </div>
+  </div>
+  <div class="row" style="margin-top:100px;">
+    <div class="col-sm-3 col-sm-push-9">
+      <img src="{% static "home/images/code.png" %}" alt="">
+    </div>
+    <div class="col-sm-9 col-sm-pull-3">
+      <blockquote class="blockquote-reverse">
+        <h2>Site builders have their limits</h2>
+        <p>If your looking for a truely custom site that you own, with features
+        a subscription based site builder simply cant provide. If you are looking
+        to create content with advanced capabilities, it is best to work with a
+        custom web developer such as myself to help reach the expectations you
+        have for your site. </p>
+      </blockquote>
+    </div>
+  </div>
+  <div class="row" style="margin-top:100px;">
+    <div class="col-sm-12" style="text-align:center;">
+      <button type="button" href="/quote" name="button" style="margin:auto; padding-bottom:20px;" class="btn btn-primary btn-lg">Request A Quote Now
+      </button>
+    </div>
+  </div>
+</div>
+{% endblock %}
